@@ -30,7 +30,7 @@
 				<a href="cookies_page.php">Cookies</a>
 			</nav>
 		</div>
-        <h1>Chocolate Cake</h1>
+        <h1>Wedding Cake</h1>
 		<div class="rows">
 			<div class="column">
 				<img src="wedding_cake.jpg">
