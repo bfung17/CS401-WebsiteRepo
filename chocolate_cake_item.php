@@ -31,13 +31,32 @@
 				<img src="chocolate_cake.jpg">
 			</div>
 			<div class="column">
-				<h2>Description</h2>
+                <h2>Price</h2>
+                <p class=price>
+                    $100
+                </p>
+                <h2>Description</h2>
 				<p>Moist chocolate sponge cake with swiss meringue 
                     chocolate buttercream, garnished in chocolate chips for all lovers of chocolate.
                 </p>
-			</div>
+                <button>Add to Cart</button>
 			</div>
 		</div>
+        <div class="review">
+            <h1>Reviews</h1>
+            <form method="post" action="review_handler.php">
+                <div class="reviewform">
+                    <?php 
+                        if ($_SESSION['canReview']){
+                            echo "<label for='user'>User:". $_SESSION['user'] ."</label>";
+                        } else {
+                            echo "<label for='user'>Sign in to Leave a Review!</label>";
+                        }
+                    ?>
+                    <input type="text" id="reviewText" name="reviewText">
+                </div>
+            </form>
+        </div>
 	</body>
     <?php include "footer.php" ?> 
 </html>

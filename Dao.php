@@ -26,6 +26,15 @@ class Dao {
         return $connection;
     }
 
+    public function insertReview($id, $user, $review){
+        $connection = $this->getConnection();
+        $q = $connection->prepare("insert into reviews (id, user, review) values (:id, :user, :review)");
+        $q->bindParam(":id", $id);
+        $q->bindParam(":user", $user);
+        $q->bindParam(":review", $review);
+        $q->execute();
+    }
+
     public function addProfile($email, $password) {
         $connection = $this->getConnection();
         $q = $connection->prepare("insert into user_login (Email, Password) values (:email, :password)");

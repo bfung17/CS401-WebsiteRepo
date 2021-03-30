@@ -13,6 +13,7 @@
 
     if ($_SESSION['authenticated']) {
         header('Location: homepage.php');
+        $_SESSION['user'] = $email;
         unset($_SESSION['signinForm']);
         exit;
     } else {
