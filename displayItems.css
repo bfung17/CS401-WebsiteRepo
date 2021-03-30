@@ -1,0 +1,19 @@
+.section {
+    float:left;
+    width:33.33%;
+}
+
+.section img {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 63%;
+    height: 37%;
+    padding: 5px;
+}
+
+.rows::after {
+    content: "";
+    display: table;
+    clear: both;
+}
