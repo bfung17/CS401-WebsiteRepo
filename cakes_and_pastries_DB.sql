@@ -74,16 +74,23 @@ create table orders (
 );
 
 create table reviews (
-	id INT NOT NULL PRIMARY KEY,
+	id INT NOT NULL,
     user VARCHAR(255) NOT NULL,
-    review VARCHAR(3000)
+    review VARCHAR(3000) NOT NULL,
+    date_entered timestamp DEFAULT CURRENT_TIMESTAMP
 );
+
+drop table reviews;
+
+insert into reviews (id, user, review) values (1, "yeet@gmail.com", "This cake is great!");
 
 drop table user_info;
 
 insert into user_login (Email, Password) values ("yeet@gmail.com","yeet123");
 
 select * from user_login;
+
+select * from reviews;
 
 select Password from user_login where Email = "yeet@gmail.com";
 

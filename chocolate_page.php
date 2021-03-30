@@ -1,4 +1,5 @@
-<?php include "session_check.php"?>
+<?php include "session_check.php";
+$_SESSION['currentPage'] = "chocolate_page.php";?>
 
 <html>
 	<head>

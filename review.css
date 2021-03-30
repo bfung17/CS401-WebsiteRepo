@@ -1,0 +1,20 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 8px 3%;
+}
+
+table > thead > tr > th {
+    text-align: left;
+    padding: 16px;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+table > tr > td {
+    border: 1px solid #ccc;
+    padding: 16px;
+}

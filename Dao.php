@@ -35,6 +35,53 @@ class Dao {
         $q->execute();
     }
 
+    public function getReviews($id) {
+        $connection = $this->getConnection();
+        try {
+            switch($id)
+            {
+                case 1:
+                    $rows = $connection->query("select user, review, date_entered from reviews where id=1 order by date_entered desc", PDO::FETCH_ASSOC);
+                    break;
+                case 2:
+                    $rows = $connection->query("select user, review, date_entered from reviews where id=2 order by date_entered desc", PDO::FETCH_ASSOC);
+                    break;
+                case 3:
+                    $rows = $connection->query("select user, review, date_entered from reviews where id=3 order by date_entered desc", PDO::FETCH_ASSOC);
+                    break;
+                case 4:
+                    $rows = $connection->query("select user, review, date_entered from reviews where id=4 order by date_entered desc", PDO::FETCH_ASSOC);
+                    break;
+                case 5:
+                    $rows = $connection->query("select user, review, date_entered from reviews where id=5 order by date_entered desc", PDO::FETCH_ASSOC);
+                    break;
+                case 6:
+                    $rows = $connection->query("select user, review, date_entered from reviews where id=6 order by date_entered desc", PDO::FETCH_ASSOC);
+                    break; 
+                case 7:
+                    $rows = $connection->query("select user, review, date_entered from reviews where id=7 order by date_entered desc", PDO::FETCH_ASSOC);
+                    break;
+                case 8:
+                    $rows = $connection->query("select user, review, date_entered from reviews where id=8 order by date_entered desc", PDO::FETCH_ASSOC);
+                    break;
+                case 9:
+                    $rows = $connection->query("select user, review, date_entered from reviews where id=9 order by date_entered desc", PDO::FETCH_ASSOC);
+                    break; 
+                case 10:
+                    $rows = $connection->query("select user, review, date_entered from reviews where id=10 order by date_entered desc", PDO::FETCH_ASSOC);
+                    break; 
+                case 11:
+                    $rows = $connection->query("select user, review, date_entered from reviews where id=11 order by date_entered desc", PDO::FETCH_ASSOC);
+                    break;                
+            }
+              
+        } catch (Exception $e) {
+            echo print_r($e,1);
+            exit;
+        }
+        return $rows;
+    }
+
     public function addProfile($email, $password) {
         $connection = $this->getConnection();
         $q = $connection->prepare("insert into user_login (Email, Password) values (:email, :password)");
@@ -67,7 +114,6 @@ class Dao {
             echo print_r($e,1);
             exit;
         }
-
     }
 
     public function checkEmail($email) {

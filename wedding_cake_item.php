@@ -1,6 +1,6 @@
 <?php 
     include "session_check.php";
-    $_SESSION['currentPage'] = "chocolate_cake_item.php";
+    $_SESSION['currentPage'] = "wedding_cake_item.php";
 ?>
 
 
@@ -33,7 +33,7 @@
         <h1>Chocolate Cake</h1>
 		<div class="rows">
 			<div class="column">
-				<img src="chocolate_cake.jpg">
+				<img src="wedding_cake.jpg">
 			</div>
 			<div class="column">
                 <h2>Price</h2>
@@ -41,8 +41,7 @@
                     $100
                 </p>
                 <h2>Description</h2>
-				<p>Moist chocolate sponge cake with swiss meringue 
-                    chocolate buttercream, garnished in chocolate chips for all lovers of chocolate.
+				<p>*some sorta description my friend will give me later*
                 </p>
                 <button>Add to Cart</button>
                 <div class="review">
@@ -63,7 +62,7 @@
                 <?php 
                     require_once 'Dao.php';
                     $dao = new Dao();
-                    $reviews = $dao->getReviews("1");
+                    $reviews = $dao->getReviews("3");
                 ?>
                 <table id="reviews">
                     <thead>

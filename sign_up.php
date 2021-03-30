@@ -1,4 +1,5 @@
-<?php include "session_check.php"?>
+<?php include "session_check.php";
+$_SESSION['currentPage'] = "sign_up.php";?>
 
 <html>
 	<head>

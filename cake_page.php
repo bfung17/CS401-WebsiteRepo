@@ -1,4 +1,5 @@
-<?php include "session_check.php"?>
+<?php include "session_check.php";
+$_SESSION['currentPage'] = "cake_page.php";?>
 
 <html>
 	<head>
@@ -35,7 +36,7 @@
 			</div>
 			<div class="section">
 				<h2>German Chocolate Cake</h2>
-				<img src="german_chocolate_cake.jpg">
+				<a href="german_chocolate_cake_item.php"><img src="german_chocolate_cake.jpg"></a>
 				<h2>Many more cakes</h2>
 				<p>This is the basic setup. I will add more functionality
 					later such as a filtering system and you will eventually be
@@ -46,7 +47,7 @@
 			</div>
 			<div class="section">
 				<h2>Wedding Cake</h2>
-				<img src="wedding_cake.jpg">
+				<a href="wedding_cake_item.php"><img src="wedding_cake.jpg"></a>
 			</div>
 		</div>
 	</body>

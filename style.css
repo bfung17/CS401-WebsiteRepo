@@ -147,11 +147,21 @@ h4 {
     display: block;
 }
 
-.reviewform > input {
-    width: 100%;
-    height: 50%;
+.reviewform > textarea {
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.reviewform > textarea {
+    padding: 10px;
+    line-height: 1.5;
+    border-radius: 5px;
     border: 1px solid #ccc;
-    padding: 4px 8px;
+    box-shadow: 1px 1px 1px #999;
+}
+
+.reviewform > input {
+    text-align:right;
 }
 
 .message {
