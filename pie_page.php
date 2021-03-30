@@ -30,11 +30,11 @@ $_SESSION['currentPage'] = "pie_page.php";?>
 		<div class="rows">
 			<div class="section">
 				<h2>Blueberry Pie</h2>
-				<img src="blueberry_pie.jpg">
+				<a href="blueberry_pie_item.php"><img src="blueberry_pie.jpg"></a>
 			</div>
 			<div class="section">
 				<h2>Keylime Pie</h2>
-				<img src="keylime_pie.jpg">
+				<a href="keylime_pie_item.php"><img src="keylime_pie.jpg"></a>
 			</div>
 			<div class="section">
 				<h2>Many more pies</h2>

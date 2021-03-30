@@ -30,11 +30,11 @@ $_SESSION['currentPage'] = "bread_page.php";?>
 		<div class="rows">
 			<div class="section">
 				<h2>Braided Bread</h2>
-				<img src="braided_brioche_bread2.jpg">
+				<a href="braided_bread_item.php"><img src="braided_brioche_bread2.jpg"></a>
 			</div>
 			<div class="section">
 				<h2>Focaccia Bread</h2>
-				<img src="focaccia_bread.jpg">
+				<a href="focaccia_bread_item.php"><img src="focaccia_bread.jpg"></a>
 			</div>
 			<div class="section">
 				<h2>Many more bread</h2>

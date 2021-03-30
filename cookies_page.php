@@ -30,7 +30,7 @@ $_SESSION['currentPage'] = "cookies_page.php";?>
 		<div class="rows">
 			<div class="section">
 				<h2>Chocolate Chip Cookies</h2>
-				<img src="cookies.jpg">
+				<a href="cookies_item.php"><img src="cookies.jpg"></a>
 			</div>
 			<div class="section">
 				<h2>Many more cookies</h2>

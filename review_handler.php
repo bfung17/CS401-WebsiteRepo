@@ -17,6 +17,30 @@
         case("wedding_cake_item.php"):
             $id = "3";
             break;
+        case("bridal_cake_item.php"):
+            $id = "4";
+            break;
+        case("truffle_item.php"):
+            $id = "5";
+            break;
+        case("blueberry_pie_item.php"):
+            $id = "6";
+            break;
+        case("keylime_pie_item.php"):
+            $id = "7";
+            break;
+        case("cinnamonroll_item.php"):
+            $id = "8";
+            break;
+        case("braided_bread_item.php"):
+            $id = "9";
+            break;
+        case("focaccia_bread_item.php"):
+            $id = "10";
+            break;
+        case("cookies_item.php"):
+            $id = "11";
+            break;
     }
 
     $user = $_SESSION['user'];

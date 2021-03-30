@@ -30,7 +30,7 @@ $_SESSION['currentPage'] = "chocolate_page.php";?>
 		<div class="rows">
 			<div class="section">
 				<h2>Chocolate Truffles</h2>
-				<img src="chocolates.jpg">
+				<a href="truffle_item.php"><img src="chocolates.jpg"></a>
 			</div>
 			<div class="section">
 				<h2>Many more chocolates</h2>

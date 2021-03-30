@@ -32,7 +32,7 @@ $_SESSION['currentPage'] = "cake_page.php";?>
 				<h2>Chocolate Cake</h2>
 				<a href="chocolate_cake_item.php"><img src="chocolate_cake.jpg"></a>
 				<h2>Bridal Cake</h2>
-				<img src="bridal_cake.jpg">
+				<a href="bridal_cake_item.php"><img src="bridal_cake.jpg"></a>
 			</div>
 			<div class="section">
 				<h2>German Chocolate Cake</h2>

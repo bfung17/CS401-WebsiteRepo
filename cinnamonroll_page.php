@@ -30,7 +30,7 @@ $_SESSION['currentPage'] = "cinnamonroll_page.php";?>
 		<div class="rows">
 			<div class="section">
 				<h2>Cinnamon Rolls</h2>
-				<img src="cinnamon_rolls.jpg">
+				<a href="cinnamonroll_item.php"><img src="cinnamon_rolls.jpg"></a>
 			</div>
 			<div class="section">
 				<h2>Many more cinnamon rolls</h2>
