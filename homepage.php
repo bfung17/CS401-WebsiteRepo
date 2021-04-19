@@ -4,6 +4,7 @@ $_SESSION['currentPage'] = "homepage.php";?>
 <html>
 	<head>
 		<title>Cady's Cakes and Pastries</title>
+		<script src="/js/jquery-3.6.0.min.js"></script>
 		<link rel="stylesheet" href="style.css">
 		<link rel="shortcut icon" type="image/jpg" href="cake.jpg"/>
 	</head>
