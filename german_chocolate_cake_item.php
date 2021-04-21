@@ -3,14 +3,20 @@
     $_SESSION['currentPage'] = "german_chocolate_cake_item.php";
 ?>
 
-
-<html>
+<!DOCTYPE html>
+<html lang="eng">
 	<head>
 		<title>Cady's Cakes and Pastries</title>
+        <meta charset="utf-8">
         <script src="/js/jquery-3.6.0.min.js"></script>
-		<link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="review.css">
-        <link rel="shortcut icon" type="image/jpg" href="cake.jpg"/>
+        <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="review.css">
+        <link rel="shortcut icon" type="image/jpg" href="ariccady_logo.jpg"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+		<script src="https://unpkg.com/@popperjs/core@2"></script>
+		<script src="/bootstrap/js/bootstrap.min.js"></script>
+		<script src="/js/search-it/search-it.min.js"></script>
 	</head>
 	<body>
 		<link rel="stylesheet" href="displayItems.css">
@@ -89,5 +95,8 @@
 		</div>
         </div>
 	</body>
-    <?php include "footer.php" ?> 
+    <?php include "footer.php" ?>
+    <script src="/js/searchbar.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
 </html>

@@ -87,8 +87,8 @@ class Dao {
         $q = $connection->prepare("insert into user_login (Email, Password) values (:email, :password)");
         $q->bindParam(":email", $email);
         //$passHash = password_hash($password,PASSWORD_DEFAULT);
-        //$q->bindParam(":password", $passHash);
-        $q->bindParam(":password", $password);
+        $passHash = hash('sha256',$password);
+        $q->bindParam(":password", $passHash);
         $q->execute();
     }
 
@@ -99,8 +99,9 @@ class Dao {
             Password = :password");
             $q->bindParam(":email", $email);
             //$passHash = password_hash($password,PASSWORD_DEFAULT);
-            $q->bindParam(":password", $password);
-            //$q->bindParam(":password", $passHash);
+            $passHash = hash('sha256',$password);
+            //$q->bindParam(":password", $password);
+            $q->bindParam(":password", $passHash);
             $q->execute();
             $row = $q->fetch();
             if ($row['total'] == 1){

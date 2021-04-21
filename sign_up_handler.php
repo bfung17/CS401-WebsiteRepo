@@ -34,6 +34,7 @@
     }
 
     if(count($errors) == 0) {
+        //$hashPass = hash('sha256',$pass);
         $dao->addProfile($email, $pass);
         unset($_SESSION['form']);
         header('Location: sign_in.php');
