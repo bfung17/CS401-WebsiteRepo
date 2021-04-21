@@ -12,7 +12,7 @@
     $_SESSION['authenticated'] = $dao->userExist($email, $password);
 
     if ($_SESSION['authenticated']) {
-        header('Location: homepage.php');
+        header('Location: ' . $_SESSION['prevPage']);
         $_SESSION['user'] = $email;
         unset($_SESSION['signinForm']);
         exit;

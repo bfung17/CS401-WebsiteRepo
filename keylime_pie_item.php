@@ -1,5 +1,10 @@
 <?php 
     include "session_check.php";
+    if(isset($_SESSION['prevPage']) && isset($_SESSION['currentPage'])) {
+		$_SESSION['prevPage'] =  $_SESSION['currentPage'];
+	} else {
+		$_SESSION['prevPage'] =  "keylime_pie_item.php";
+	}
     $_SESSION['currentPage'] = "keylime_pie_item.php";
 ?>
 

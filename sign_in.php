@@ -1,4 +1,9 @@
 <?php include "session_check.php";
+	if(isset($_SESSION['prevPage']) && isset($_SESSION['currentPage'])) {
+		$_SESSION['prevPage'] =  $_SESSION['currentPage'];
+	} else {
+		$_SESSION['prevPage'] =  "sign_in.php";
+	}
 $_SESSION['currentPage'] = "sign_in.php";?>
 
 <!DOCTYPE html>
@@ -26,7 +31,7 @@ $_SESSION['currentPage'] = "sign_in.php";?>
         <div class="header">
             <h1>Sign In</h1>
 			<form method="post" action="sign_in_handler.php">
-				<br><a href="sign_up.php"><h3>Create Account</h3></a></br>
+				<a href="sign_up.php"><h3>Create Account</h3></a>
 				<div class="signinform">
 					<label for="email">Email</label>
 					<input value="<?php echo isset($_SESSION['signinForm']['email']) ? $_SESSION['signinForm']['email'] : ''; ?>"type="text" id="email" name="email">

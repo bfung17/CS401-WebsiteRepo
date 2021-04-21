@@ -1,0 +1,49 @@
+[
+    {
+      "id": 1,
+      "category": "chocolate_cake",
+      "name": "Chocolate Cake",
+      "rating":4,
+      "image": "chocolate_cake.jpg",
+      "description": "Moist chocolate sponge cake with swiss meringue chocolate buttercream, garnished in chocolate chips for all lovers of chocolate.",
+      "available": true,
+      "price": 100.00,
+      "keywords": ["chocolate"],
+      "discount": 0
+    },
+    {
+      "id": 2,
+      "category": "chocolate_cake",
+      "name": "German Chocolate Cake",
+      "rating": 5,
+      "image": "german_chocolate_cake.jpg",
+      "description": "Moist chocolate sponge cake with swiss meringue chocolate buttercream, garnished in chocolate chips for all lovers of chocolate.",
+      "available": true,
+      "price": 150.00,
+      "keywords":["chocolate", "german"],
+      "discount": 0
+    },
+    {
+      "id": 3,
+      "category": "wedding",
+      "name": "Wedding Cake",
+      "rating": 3,
+      "image": "wedding_cake.jpg",
+      "description": "temp description",
+      "available": true,
+      "price": 46.99,
+      "keywords":["wedding"],
+      "discount": 0
+    },
+    {
+      "id": 4,
+      "category": "wedding",
+      "name": "Bridal Cake",
+      "rating": 2,
+      "image": "bridal_cake.jpg",
+      "description": "temp description",
+      "price": 20.00,
+      "keywords":["wedding", "bridal"],
+      "discount": 0
+    }
+  ]

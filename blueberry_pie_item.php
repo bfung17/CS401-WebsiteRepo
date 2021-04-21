@@ -1,5 +1,10 @@
 <?php 
     include "session_check.php";
+    if(isset($_SESSION['prevPage']) && isset($_SESSION['currentPage'])) {
+		$_SESSION['prevPage'] =  $_SESSION['currentPage'];
+	} else {
+		$_SESSION['prevPage'] =  "blueberry_pie_item.php";
+	}
     $_SESSION['currentPage'] = "blueberry_pie_item.php";
 ?>
 
@@ -16,7 +21,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 		<script src="https://unpkg.com/@popperjs/core@2"></script>
 		<script src="/bootstrap/js/bootstrap.min.js"></script>
-		<script src="/js/search-it/search-it.min.js"></script>
 	</head>
 	<body>
 		<link rel="stylesheet" href="displayItems.css">

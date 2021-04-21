@@ -82,13 +82,28 @@ create table reviews (
 
 drop table reviews;
 
-insert into reviews (id, user, review) values (1, "yeet@gmail.com", "This cake is great!");
+insert into reviews (id, user, review) values (2, "bob@gmail.com", "poggers");
+
+select user, review, date_entered from reviews where id=1 order by date_entered desc;
 
 drop table user_info;
 
 insert into user_login (Email, Password) values ("yeet@gmail.com","yeet123");
 
 select * from user_login;
+
+select * from cakes;
+
+insert into cakes (Product_ID, Product_Name, Description, Quantity, Price, avail) values
+	(1, "Chocolate Cake", "Moist chocolate sponge cake with swiss meringue chocolate buttercream, garnished in chocolate chips for all lovers of chocolate.",
+		100, 100.00, "1"),
+	(2,"German Chocolate Cake", "Moist chocolate sponge cake with swiss meringue chocolate buttercream, garnished in chocolate chips for all lovers of chocolate.",
+		100, 150.00, "1"),
+    (3,"Wedding Cake", "no description yet", 100, 100.00, "1"),
+    (4,"Bridal Cake", "no description yet", 100, 69.69, "1");
+
+alter table cakes
+	add avail enum('0','1') NOT NULL;
 
 select * from reviews;
 

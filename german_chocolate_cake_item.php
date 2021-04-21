@@ -1,5 +1,10 @@
 <?php 
     include "session_check.php";
+    if(isset($_SESSION['prevPage']) && isset($_SESSION['currentPage'])) {
+		$_SESSION['prevPage'] =  $_SESSION['currentPage'];
+	} else {
+		$_SESSION['prevPage'] =  "german_chocolate_cake_item.php";
+	}
     $_SESSION['currentPage'] = "german_chocolate_cake_item.php";
 ?>
 
@@ -27,16 +32,6 @@
                 include "header.php";
             }
         ?>
-		<div class="navigation">
-			<nav>
-				<a href="cake_page.php">Cakes</a>
-				<a href="chocolate_page.php">Chocolates</a>
-				<a href="pie_page.php">Pies</a>
-				<a href="cinnamonroll_page.php">Cinnamon Rolls</a>
-				<a href="bread_page.php">Bread</a>
-				<a href="cookies_page.php">Cookies</a>
-			</nav>
-		</div>
         <h1>German Chocolate Cake</h1>
 		<div class="rows">
 			<div class="column">
@@ -96,7 +91,6 @@
         </div>
 	</body>
     <?php include "footer.php" ?>
-    <script src="/js/searchbar.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
 </html>

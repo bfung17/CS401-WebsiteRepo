@@ -150,4 +150,48 @@ class Dao {
         }
         return $row;
     }
+
+    public function fetchCakes() {
+        if (isset($_POST["action"])) {
+            $query = "
+          SELECT * FROM cakes WHERE stock_avail = '1'
+         ";
+            if (isset($_POST["minimum_price"], $_POST["maximum_price"]) && !empty($_POST["minimum_price"]) && !empty($_POST["maximum_price"])) {
+                $query .= "
+           AND Price BETWEEN '" . $_POST["minimum_price"] . "' AND '" . $_POST["maximum_price"] . "'
+          ";
+            }    
+        }
+            $connection = $this->getConnection();
+            $statement = $connection->prepare($query);
+            $statement->execute();
+            $result    = $statement->fetchAll();
+            $total_row = $statement->rowCount();
+            $output    = '';
+            if ($total_row > 0) {
+                foreach ($result as $row) {
+                    $output .= '
+                <div class="col-md-4 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-image4">
+                        <a href="#">
+                            <img class="pic-1" src="' . $row['Product_Image'] . '">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">' . $row['Product_Name'] . '</a></h3>
+                        <div class="price">
+                            $' . $row['Price'] . '
+                            <span>$' . $row['Price'] . '</span>
+                        </div>
+                        <a class="add-to-cart" href="">ADD TO CART</a>
+                    </div>
+                </div>
+                </div>';
+                }
+            } else {
+                $output = '<h3>No Data Found</h3>';
+            }
+            echo $output;
+    }
 }
