@@ -12,10 +12,18 @@
     $_SESSION['authenticated'] = $dao->userExist($email, $password);
 
     if ($_SESSION['authenticated']) {
-        header('Location: ' . $_SESSION['prevPage']);
-        $_SESSION['user'] = $email;
-        unset($_SESSION['signinForm']);
-        exit;
+        if($_SESSION['prevPage'] == 'signup.php') {
+            header('Location: homepage.php');
+            $_SESSION['user'] = $email;
+            unset($_SESSION['signinForm']);
+            exit;
+        } else {
+            header('Location: ' . $_SESSION['prevPage']);
+            $_SESSION['user'] = $email;
+            unset($_SESSION['signinForm']);
+            exit;
+        }
+
     } else {
         header('Location: sign_in.php');
         $_SESSION['signinError'] = "Invalid email address or password.";
